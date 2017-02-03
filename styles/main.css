@@ -1,0 +1,183 @@
+html, body {
+	color: #000;
+	font-size: 15px;
+	line-height: 22px;
+	margin: 0;
+	padding: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container img {
+	float: left;
+}
+
+.container .logo {
+	float: left;
+}
+
+.container .logo h1 {
+	display: inline-block;
+	margin-left: 10px;
+  vertical-align: top;
+}
+
+.container .menu {
+	display: inline-block;
+}
+
+.container .alter-menu {
+	display: none;
+}
+
+.container ul {
+	float: right;
+	list-style: none;
+}
+
+.container ul li {
+	float: left;
+	padding: 0 2px;
+}
+
+.container ul li a {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	padding: 10px 15px;
+	text-decoration: none;
+}
+
+.container ul li a:hover {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+	text-decoration: none;
+}
+
+main {
+	padding: 0 10px;
+}
+
+main img {
+	float: left;
+	max-height: 200px;
+	width: 100%;
+}
+
+main .column-1 {
+	border-right: 1px solid rgba(0, 0, 0, 0.9);
+	float: left;
+	overflow: hidden;
+	padding: 5px;
+	width: 10%;
+}
+
+main .column-2 {
+	border-left: 1px solid rgba(255, 255, 255, 0.9);
+	border-right: 1px solid rgba(255, 255, 255, 0.9);
+	float: left;
+	overflow: hidden;
+	padding: 5px;
+	width: 80%;
+}
+
+main .column-3 {
+	border-left: 1px solid rgba(0, 0, 0, 0.9);
+	float: left;
+	overflow: hidden;
+	padding: 5px;
+	width: 10%;
+}
+
+@media screen and (max-width: 800px) {
+
+	.container .logo {
+		width: 80%;
+	}
+
+	.container .menu {
+		margin-top: 0;
+	}
+
+	.container .alter-menu {
+		display: block;
+		height: 32px;
+		margin: 15px 10px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 32px;
+	}
+
+	.container ul {
+		float: left;
+		margin-left: 30px;
+		margin-top: -10px;
+	}
+
+	.container ul li {
+		display: block;
+		margin: 10px 0;
+		width: 100%;
+	}
+
+	.container ul li a {
+		width: 100%;
+	}
+
+	main .column-2 {
+		display: none;
+	}
+
+	main .column-3, main .column-1 {
+		width: 50%;
+	}
+
+	main .column-1 {
+		border-left: none;
+	}
+
+}
+
+@media screen and (max-width: 400px) {
+
+	nav ul li {
+		display: none;
+	}
+
+	main .column-2 {
+		display: none;
+	}
+
+	main .column-1, main .column-3 {
+		border-left: none;
+		border-right: none;
+		height: auto;
+		width: 100%;
+	}
+
+	.container .alter-menu {
+		display: block;
+		float: right;
+		margin: 15px 10px;
+		height: 32px;
+		width: 32px;
+	}
+
+}
+
+.clearfix:after {
+	clear: both;
+  content: " ";
+  display: block;
+  font-size: 0;
+	height: 0;
+	visibility: hidden;
+}
+
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
